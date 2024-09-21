@@ -6,6 +6,7 @@
     font-weight: 100;
     font-style: normal;
     transition: all 0.3s ease-out;
+    font-size: 3vh;
 }
 
 body,
@@ -32,6 +33,124 @@ h1 {
 
 
 
+/*menu*/
+#menu,
+#login,
+#cadastro,
+#sucesso {
+    display: none;
+}
 
+#menu.aparecer,
+#login.aparecer,
+#cadastro.aparecer,
+#sucesso.aparecer {
+    display: block;
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+.btn-custom {
+    padding: 10px 170px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: 2px solid #000;
+    background-color: transparent;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    border-radius: 0;
+    border: 2px solid #000;
+}
+
+.btn-social {
+    padding: 10px 15px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid #000;
+    background-color: transparent;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+input, select {
+    padding: 10px 15px !important;
+    font-size: 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    border-radius: 5px !important;
+    border: 2px solid #000 !important;
+    background-color: transparent !important;
+    color: #000 !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-social img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.btn-social:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ced4da;
+}
+
+.input-group input {
+    border: none;
+    padding: 10px;
+    flex: 1;
+}
+
+.input-group .bi {
+    cursor: pointer;
+    padding: 10px;
+    border: 2px solid #000 !important;
+    border-radius: 5px !important;
+
+}
+
+#erro,
+#erro_newUsuario,
+#erro_newSenha,
+#erro_newEmail {
+    color: red;
+    font-size: 0.9rem;
+    display: none;
+}
+
+#erro.aparecer,
+#erro_newUsuario.aparecer,
+#erro_newSenha.aparecer,
+#erro_newEmail.aparecer {
+    display: block;
+}
+
+.centered-content {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .btn-custom {
+        padding: 10px 80px;
+    }
+
+    .btn-social {
+        padding: 10px;
+    }
+}
 
 /*home*/

@@ -25,6 +25,7 @@
         }
 
         .menu-item {
+            cursor: pointer;
             flex: 0 0 auto;
             scroll-snap-align: start;
             display: flex;
@@ -115,134 +116,251 @@
     </nav>
 
     <main>
-        <section class="p-4">
-            <!-- Navegação Rápida -->
-            <h2 class="m-2" style="text-decoration: underline;">Navegação Rápida</h2>
-            <section class="menu-scroll mb-5">
-                <div class="sub-menu">
-                    <div class="menu-item menu-item-avaliacao">
-                        <i class="bi bi-clipboard-check"></i>
-                        <p>Avaliação</p>
+        <!-- home -->
+        <section class="aparecer" id="home">
+            <div class="p-4">
+                <!-- Navegação Rápida -->
+                <h2 class="m-2" style="text-decoration: underline;">Navegação Rápida</h2>
+                <section class="menu-scroll mb-5">
+                    <div class="sub-menu">
+                        <div class="menu-item menu-item-avaliacao" onclick="navegacaoRapida('avaliacao')">
+                            <i class="bi bi-clipboard-check"></i>
+                            <p>Avaliação</p>
+                        </div>
+                        <div class="menu-item menu-item-bateria" onclick="navegacaoRapida('bateria de teste')">
+                            <i class="bi bi-battery-half"></i>
+                            <p>Bateria de Teste</p>
+                        </div>
+                        <div class="menu-item menu-item-ficha" onclick="navegacaoRapida('ficha de avalicao')">
+                            <i class="bi bi-file-earmark-text"></i>
+                            <p>Ficha de Avaliação</p>
+                        </div>
                     </div>
-                    <div class="menu-item menu-item-bateria">
-                        <i class="bi bi-battery-half"></i>
-                        <p>Bateria de Teste</p>
+                    <div class="sub-menu">
+                        <div class="menu-item menu-item-avaliacoes" onclick="navegacaoRapida('avalicoes fisica')">
+                            <i class="bi bi-heart-pulse"></i>
+                            <p>Avaliações Física</p>
+                        </div>
+                        <div class="menu-item menu-item-outros" onclick="navegacaoRapida('outros')">
+                            <i class="bi bi-three-dots"></i>
+                            <p>Outros</p>
+                        </div>
                     </div>
-                    <div class="menu-item menu-item-ficha">
-                        <i class="bi bi-file-earmark-text"></i>
-                        <p>Ficha de Avaliação</p>
-                    </div>
-                </div>
-                <div class="sub-menu">
-                    <div class="menu-item menu-item-avaliacoes">
-                        <i class="bi bi-heart-pulse"></i>
-                        <p>Avaliações Física</p>
-                    </div>
-                    <div class="menu-item menu-item-outros">
-                        <i class="bi bi-three-dots"></i>
-                        <p>Outros</p>
-                    </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Avaliação -->
-            <h2 class="m-2" style="text-decoration: underline;">Avaliação</h2>
-            <section class="menu-scroll mb-5">
-                <div class="sub-menu">
-                    <div class="menu-item menu-item-cardiovascular">
-                        <i class="bi bi-heart-fill"></i>
-                        <p>Saúde Cardiovascular</p>
+                <!-- Avaliação -->
+                <h2 class="m-2" style="text-decoration: underline;">Avaliação</h2>
+                <section class="menu-scroll mb-5">
+                    <div class="sub-menu">
+                        <div class="menu-item menu-item-cardiovascular bg-warning" onclick="avaliacao('saude cardiovascular')">
+                            <i class="bi bi-heart-fill"></i>
+                            <p>Saúde Cardiovascular</p>
+                        </div>
+                        <div class="menu-item menu-item-ossea" onclick="avaliacao('saude ossea')"">
+                            <i class=" bi bi-person-arms-up"></i>
+                            <p>Saúde Óssea</p>
+                        </div>
                     </div>
-                    <div class="menu-item menu-item-ossea">
-                        <i class="bi bi-person-arms-up"></i>
-                        <p>Saúde Óssea</p>
+                    <div class="sub-menu">
+                        <div class="menu-item" onclick="avaliacao('saude musculoesqueletica')">
+                            <i class="bi bi-person-arms-up"></i>
+                            <p>Saúde Musculoesquelética</p>
+                        </div>
+                        <div class="menu-item menu-item-relatorios" onclick="avaliacao('relatorios')">
+                            <i class="bi bi-file-earmark-text-fill"></i>
+                            <p>Relatórios</p>
+                        </div>
                     </div>
-                </div>
-                <div class="sub-menu">
-                    <div class="menu-item">
-                        <i class="bi bi-person-arms-up"></i>
-                        <p>Saúde Musculoesquelética</p>
-                    </div>
-                    <div class="menu-item menu-item-relatorios">
-                        <i class="bi bi-file-earmark-text-fill"></i>
-                        <p>Relatórios</p>
-                    </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Bateria de Testes -->
-            <h2 class="m-2" style="text-decoration: underline;">Bateria de Testes</h2>
-            <section class="menu-scroll mb-5">
-                <div class="sub-menu">
-                    <div class="menu-item menu-item-tabelas">
-                        <i class="bi bi-table"></i>
-                        <p>Tabelas</p>
+                <!-- Bateria de Testes -->
+                <h2 class="m-2" style="text-decoration: underline;">Bateria de Testes</h2>
+                <section class="menu-scroll mb-5">
+                    <div class="sub-menu">
+                        <div class="menu-item menu-item-tabelas">
+                            <i class="bi bi-table"></i>
+                            <p>Tabelas</p>
+                        </div>
+                        <div class="menu-item menu-item-tabelaNew">
+                            <i class="bi bi-table"></i>
+                            <p>Nova Tabela</p>
+                        </div>
                     </div>
-                    <div class="menu-item menu-item-tabelaNew">
-                        <i class="bi bi-table"></i>
-                        <p>Nova Tabela</p>
-                    </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Avaliação Física -->
-            <h2 class="m-2" style="text-decoration: underline;">Avaliação Física</h2>
-            <section class="menu-scroll mb-5">
-                <div class="sub-menu">
-                    <div class="menu-item">
-                        <i class="bi bi-clipboard-check"></i>
-                        <p>Percentis de desempenho</p>
+                <!-- Avaliação Física -->
+                <h2 class="m-2" style="text-decoration: underline;">Avaliação Física</h2>
+                <section class="menu-scroll mb-5">
+                    <div class="sub-menu">
+                        <div class="menu-item">
+                            <i class="bi bi-clipboard-check"></i>
+                            <p>Percentis de desempenho</p>
+                        </div>
+                        <div class="menu-item">
+                            <i class="bi bi-battery-half"></i>
+                            <p>Aptidão cardiorrespiratória</p>
+                        </div>
+                        <div class="menu-item">
+                            <i class="bi bi-file-earmark-text"></i>
+                            <p>Potência de membros superiores</p>
+                        </div>
+                        <div class="menu-item">
+                            <i class="bi bi-three-dots"></i>
+                            <p>Potência de membros inferiores</p>
+                        </div>
                     </div>
-                    <div class="menu-item">
-                        <i class="bi bi-battery-half"></i>
-                        <p>Aptidão cardiorrespiratória</p>
+                    <div class="sub-menu">
+                        <div class="menu-item menu-item-flexibilidade">
+                            <i class="bi bi-heart-pulse"></i>
+                            <p>Flexibilidade</p>
+                        </div>
+                        <div class="menu-item menu-item-muscular">
+                            <i class="bi bi-three-dots"></i>
+                            <p>Resistência muscular</p>
+                        </div>
+                        <div class="menu-item menu-item-agilidade">
+                            <i class="bi bi-three-dots"></i>
+                            <p>Agilidade</p>
+                        </div>
+                        <div class="menu-item menu-item-velocidade">
+                            <i class="bi bi-three-dots"></i>
+                            <p>Velocidade</p>
+                        </div>
                     </div>
-                    <div class="menu-item">
-                        <i class="bi bi-file-earmark-text"></i>
-                        <p>Potência de membros superiores</p>
-                    </div>
-                    <div class="menu-item">
-                        <i class="bi bi-three-dots"></i>
-                        <p>Potência de membros inferiores</p>
-                    </div>
-                </div>
-                <div class="sub-menu">
-                    <div class="menu-item menu-item-flexibilidade">
-                        <i class="bi bi-heart-pulse"></i>
-                        <p>Flexibilidade</p>
-                    </div>
-                    <div class="menu-item menu-item-muscular">
-                        <i class="bi bi-three-dots"></i>
-                        <p>Resistência muscular</p>
-                    </div>
-                    <div class="menu-item menu-item-agilidade">
-                        <i class="bi bi-three-dots"></i>
-                        <p>Agilidade</p>
-                    </div>
-                    <div class="menu-item menu-item-velocidade">
-                        <i class="bi bi-three-dots"></i>
-                        <p>Velocidade</p>
-                    </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- Ficha de Avaliação -->
-            <h2 class="m-2" style="text-decoration: underline;">Ficha de Avaliação</h2>
-            <section class="menu-scroll mb-5">
-                <div class="sub-menu">
-                    <div class="menu-item menu-item-muscular">
-                        <i class="bi bi-clipboard-check"></i>
-                        <p>Perfils dos alunos</p>
+                <!-- Ficha de Avaliação -->
+                <h2 class="m-2" style="text-decoration: underline;">Ficha de Avaliação</h2>
+                <section class="menu-scroll mb-5">
+                    <div class="sub-menu">
+                        <div class="menu-item menu-item-muscular">
+                            <i class="bi bi-clipboard-check"></i>
+                            <p>Perfils dos alunos</p>
+                        </div>
+                        <div class="menu-item menu-item-muscular">
+                            <i class="bi bi-battery-half"></i>
+                            <p>Histórico Avaliativo</p>
+                        </div>
                     </div>
-                    <div class="menu-item menu-item-muscular">
-                        <i class="bi bi-battery-half"></i>
-                        <p>Histórico Avaliativo</p>
+                </section>
+            </div>
+        </section>
+
+        <!-- Avaliação -->
+        <section class="desaparecer" id="sectionAvalicao">
+            <div class="p-4">
+                <div id="divSaudeCardiovascular">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Avaliação</li>
+                            <li class="breadcrumb-item active" aria-current="page">Saúde Cardiovascular</li>
+                        </ol>
+                    </nav>
+                    <form class="d-flex flex-column justify-content-center align-items-center"
+                        id="formSaudeCardiovascular">
+                        <div>
+                            <input type="text" placeholder="Nome completo" id="nome" class="form-control mb-3">
+                            <select class="form-select mt-2 mb-3" id="sexo">
+                                <option value="">Sexo</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                            </select>
+                            <input type="number" placeholder="Idade" id="idade" class="form-control mb-3">
+                            <input type="number" placeholder="Peso (kg)" id="peso" class="form-control mb-3">
+                            <input type="number" placeholder="Altura (m)" id="altura" class="form-control mb-3">
+                            <button class="btn btn-custom mb-3" type="button"
+                                onclick="calcular('saude cardiovascular')">Calcular</button>
+                            <!-- Mensagem de erro ou sucesso aparece aqui -->
+                            <div id="mensagem" class="text-danger mt-3" style="display: none;"></div>
+                        </div>
+                    </form>
+
+                    <!-- Exibir resultado aqui -->
+                    <div id="divCalculoSaudeCardiovascular" class="desaparecer">
+                        <!-- Resultado dos cálculos será mostrado aqui -->
                     </div>
+
+                    <script>
+                        function calcular(menu) {
+                            var divCalculoSaudeCardiovascular = document.getElementById("divCalculoSaudeCardiovascular");
+                            var formSaudeCardiovascular = document.getElementById("formSaudeCardiovascular");
+                            var mensagem = document.getElementById("mensagem");
+
+                            var nome = document.getElementById("nome").value;
+                            var sexo = document.getElementById("sexo").value;
+                            var idade = parseInt(document.getElementById("idade").value);
+                            var peso = parseFloat(document.getElementById("peso").value);
+                            var altura = parseFloat(document.getElementById("altura").value);
+
+                            // Verificar se os dados de peso e altura são válidos
+                            if (isNaN(peso) || isNaN(altura) || altura <= 0 || peso <= 0 || nome === "" || sexo === "") {
+                                mensagem.innerHTML = "Por favor, insira todos os valores corretamente.";
+                                mensagem.style.display = "block";  // Exibir a mensagem em vermelho
+                                return;
+                            }
+
+                            if (menu === 'saude cardiovascular') {
+                                formSaudeCardiovascular.className = 'desaparecer';
+                                divCalculoSaudeCardiovascular.className = 'aparecer'; // Mostra o novo display após o cálculo
+                                mensagem.style.display = "none";  // Esconde a mensagem
+
+                                // Calcular IMC
+                                var imc = peso / (altura * altura);
+
+                                // Determinar zona de risco com base na idade e sexo
+                                var zona = verificarZonaDeRisco(imc, idade, sexo);
+                                var corZona = zona === "Zona de Risco à Saúde" ? "text-danger" : "text-success";  // Define cor (vermelho ou verde)
+
+                                // Exibir o resultado formatado
+                                var resultado = `
+                                    <ul class="list-group mt-3">
+                                        <li class="list-group-item"><strong>Nome:</strong> ${nome}</li>
+                                        <li class="list-group-item"><strong>Sexo:</strong> ${sexo}</li>
+                                        <li class="list-group-item"><strong>Idade:</strong> ${idade} anos</li>
+                                        <li class="list-group-item"><strong>Peso:</strong> ${peso} kg</li>
+                                        <li class="list-group-item"><strong>Altura:</strong> ${altura} m</li>
+                                        <li class="list-group-item ${corZona}"><strong>IMC:</strong> ${imc.toFixed(2)} - ${zona}</li>
+                                    </ul>
+                                `;
+
+                                divCalculoSaudeCardiovascular.innerHTML = resultado;
+                            } else {
+                                console.log('erro');
+                            }
+                        }
+
+                        function verificarZonaDeRisco(imc, idade, sexo) {
+                            var pontosDeCorteMasculino = [17.7, 17.8, 19.2, 19.3, 20.7, 22.1, 22.2, 22.0, 22.2, 23.0, 24.0, 25.4];
+                            var pontosDeCorteFeminino = [17.0, 17.1, 18.2, 19.1, 20.9, 22.3, 22.6, 22.0, 22.0, 22.4, 24.0, 24.0];
+
+                            var pontoDeCorte;
+
+                            if (idade >= 6 && idade <= 17) {
+                                if (sexo === "masculino") {
+                                    pontoDeCorte = pontosDeCorteMasculino[idade - 6];
+                                } else if (sexo === "feminino") {
+                                    pontoDeCorte = pontosDeCorteFeminino[idade - 6];
+                                } else {
+                                    return "sexo inválido";
+                                }
+                            } else {
+                                return "Idade fora da faixa de 6 a 17 anos.";
+                            }
+
+                            // Verificar se o IMC está acima ou abaixo do ponto de corte
+                            if (imc >= pontoDeCorte) {
+                                return "Zona de Risco à Saúde";
+                            } else {
+                                return "Zona Saudável";
+                            }
+                        }
+                    </script>
                 </div>
-            </section>
         </section>
     </main>
 
+    <script src="./assets/js/home.js"></script>
     <script src="./assets/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/bootstrap/popper.min.js"></script>
 </body>
